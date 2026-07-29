@@ -1,0 +1,38 @@
+# ─────────────────────────────────────────────────────────────
+#  Configuración de Jekyll para GitHub Pages
+#  Microcredencial en Ingeniería de Software Agéntica (ETSISI-UPM)
+# ─────────────────────────────────────────────────────────────
+
+title: "Microcredencial en Ingeniería de Software Agéntica"
+description: "Título propio de la Universidad Politécnica de Madrid (ETSISI), 2 ECTS."
+author: "Universidad Politécnica de Madrid - ETSISI"
+lang: es
+
+# ⚠️  AJUSTA ESTAS DOS LÍNEAS ANTES DEL PRIMER DESPLIEGUE
+#  · Sitio de proyecto  (usuario.github.io/mi-repo):
+#        url: "https://USUARIO.github.io"
+#        baseurl: "/NOMBRE-DEL-REPO"
+#  · Sitio de usuario   (usuario.github.io):
+#        url: "https://USUARIO.github.io"
+#        baseurl: ""
+url: "https://USUARIO.github.io"
+baseurl: "/NOMBRE-DEL-REPO"
+
+# No declaramos ningún tema: la página es autónoma (Tailwind vía CDN)
+# y cada fichero usa `layout: null` en su front matter.
+# theme: minima
+
+plugins:
+  - jekyll-sitemap
+
+# Ficheros que no deben publicarse
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - .gitignore
+  - LICENSE
+
+# Rendimiento del build
+incremental: false

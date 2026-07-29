@@ -1,14 +1,38 @@
+---
+layout: null
+title: "Microcredencial en Ingeniería de Software Agéntica — UPM"
+description: "Título propio de la Universidad Politécnica de Madrid (ETSISI), 2 ECTS: ingeniería de software agéntica, desarrollo dirigido por especificaciones y equipos autónomos de agentes. Noviembre de 2026, Campus Sur."
+---
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microcredencial en Ingeniería de Software Agéntica - UPM</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <meta name="author" content="Universidad Politécnica de Madrid - ETSISI">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+    <!-- Open Graph / redes sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- Favicon embebido (SVG en data URI: no requiere ficheros adicionales) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%230f172a'/%3E%3Ctext%20x='16'%20y='22'%20font-family='Arial,sans-serif'%20font-size='14'%20font-weight='bold'%20fill='%2360a5fa'%20text-anchor='middle'%3EIA%3C/text%3E%3C/svg%3E">
+
+    <!-- Tailwind CSS (version fijada para builds reproducibles) -->
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <!-- FontAwesome para iconografía -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
@@ -54,7 +78,7 @@
 
                 <!-- Botón de Acción y Menú Hamburguesa -->
                 <div class="flex items-center gap-3">
-                    <a href="https://www.upm.es/atenea/" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold px-4 md:px-5 py-2.5 rounded-xl text-xs md:text-sm transition-all shadow-lg shadow-amber-500/20">
+                    <a href="https://www.upm.es/atenea/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold px-4 md:px-5 py-2.5 rounded-xl text-xs md:text-sm transition-all shadow-lg shadow-amber-500/20">
                         <i class="fas fa-user-plus"></i>
                         <span>Inscripción</span>
                     </a>
@@ -532,7 +556,7 @@
                     </div>
 
                     <div class="pt-6 border-t border-slate-800">
-                        <a href="https://maps.google.com/?cid=2434771609363420954" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-amber-400 hover:text-amber-300 transition-colors">
+                        <a href="https://maps.google.com/?cid=2434771609363420954" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-amber-400 hover:text-amber-300 transition-colors">
                             <i class="fas fa-map-location-dot"></i>
                             <span>Abrir ubicación en Google Maps</span>
                             <i class="fas fa-arrow-up-right-from-square text-[10px]"></i>
@@ -636,7 +660,7 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-center text-[11px] text-slate-600">
             <p>&copy; 2026 Universidad Politécnica de Madrid. Reservados todos los derechos.</p>
-            <p class="mt-1">Página Web Oficial: <a href="https://www.upm.es/Estudiantes/Estudios_Titulaciones/FormacionPermanente/Microcredencial?id=1589&fmt=detail" target="_blank" class="hover:underline text-blue-500">Posgrados propios de la UPM (Microcredenciales)</a></p>
+            <p class="mt-1">Página Web Oficial: <a href="https://www.upm.es/Estudiantes/Estudios_Titulaciones/FormacionPermanente/Microcredencial?id=1589&fmt=detail" target="_blank" rel="noopener noreferrer" class="hover:underline text-blue-500">Posgrados propios de la UPM (Microcredenciales)</a></p>
         </div>
     </footer>
 
@@ -646,6 +670,7 @@
     </a>
 
     <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    {% raw %}
     <script>
         // Control del menú desplegable móvil
         function toggleMobileMenu() {
@@ -675,5 +700,6 @@
             }
         }
     </script>
+    {% endraw %}
 </body>
 </html>
